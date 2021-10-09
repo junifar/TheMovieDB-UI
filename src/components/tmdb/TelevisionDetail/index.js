@@ -1,9 +1,10 @@
-import { Grid, Link, Typography } from "@mui/material";
 import React, { Fragment } from "react";
-import Paper from "@mui/material/Paper";
+import { Grid, Link, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 function TelevisionDetail() {
+  const IMAGE_BACKGROUND =
+    "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/wvdWb5kTQipdMDqCclC6Y3zr4j3.jpg";
   return (
     <Fragment>
       <h2>Television Detail</h2>
@@ -17,15 +18,10 @@ function TelevisionDetail() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundImage: "https://via.placeholder.com/240x320.png",
+          backgroundImage: IMAGE_BACKGROUND,
         }}>
-        {
-          <img
-            style={{ display: "none" }}
-            src="https://via.placeholder.com/240x320.png"
-            alt="poster"
-          />
-        }
+        {/* Increase the priority of the hero background image */}
+        {<img style={{ display: "none" }} src={IMAGE_BACKGROUND} alt="TEST" />}
         <Box
           sx={{
             position: "absolute",
@@ -49,31 +45,18 @@ function TelevisionDetail() {
                 variant="h3"
                 color="inherit"
                 gutterBottom>
-                Title
+                TITLE
               </Typography>
               <Typography variant="h5" color="inherit" paragraph>
-                Description
+                DESCRIPTION
               </Typography>
               <Link variant="subtitle1" href="#">
-                Link Text
+                LINK
               </Link>
             </Box>
           </Grid>
         </Grid>
       </Paper>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <img src="https://via.placeholder.com/240x320.png" alt="poster" />
-        </Grid>
-        <Grid item xs={9}>
-          <div>
-            <strong>ID : </strong> 0000
-          </div>
-          <div>
-            <strong>Title : </strong> Lorem Ipsum
-          </div>
-        </Grid>
-      </Grid>
     </Fragment>
   );
 }
