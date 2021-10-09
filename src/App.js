@@ -4,6 +4,7 @@ import Movie from './pages/Movie';
 import MovieNowPlaying from './pages/MovieNowPlaying';
 import MovieTopRating from './pages/MovieTopRating';
 import TV from './pages/TV';
+import TVDetailsPage from './pages/TVDetailsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/movie/now_playing' component={MovieNowPlaying} />
         <Route path='/movie/top_rating' component={MovieTopRating} />
         <Route path='/movie' component={Movie} />
+        <Route path='/tv/detail' component={TVDetailsPage} />
         <Route path='/tv' component={TV} />
       </Switch>
     </Router>

@@ -22,6 +22,12 @@ function Menu() {
                 href={"/tv"} sx={{ m:2 }}>
                 TV
             </Link>
+            <Link
+                color="inherit"
+                underline="none"
+                href={"/tv/detail"} sx={{ m:2 }}>
+                Detail
+            </Link>
         </Fragment>
     )
 }
