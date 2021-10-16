@@ -7,7 +7,7 @@ import { ListUser } from "../components";
 export default function Home() {
   return (
     <Container fixed>
-      <Header title="Aplikasi User App"/>
+      <Header title="Aplikasi User Apps"/>
       <Content>
         <ListUser/>
       </Content>
